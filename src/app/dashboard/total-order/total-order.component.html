@@ -13,8 +13,9 @@
      </div>
   </div> -->
 <div class="table-responsive">
-  <div class="mat-elevation-z8">
-    <table id="myTable" mat-table [dataSource]="dataSource" class="table-bordered table-striped " style="background-color: rgb(223 233 237 / 87%);" matSort >
+  <div class="mat-elevation-z8" style="display: flex;
+  justify-content: center;">
+    <table id="myTable" mat-table [dataSource]="dataSource" class="table-bordered table-striped " style="background-color:#c1dfda;" matSort >
 
       <ng-container matColumnDef="OrderNo">
         <th mat-header-cell *matHeaderCellDef>Order No </th>

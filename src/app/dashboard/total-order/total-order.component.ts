@@ -39,6 +39,13 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {OrderNo: '12346', SKU: '20-09-2023', Qty: 'Mumbai', Date: 'Mumbai'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  {OrderNo: '12346', SKU: '45', Qty: '200', Date: '20-09-2023'},
+  
 
 ];
