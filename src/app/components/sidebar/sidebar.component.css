@@ -1,0 +1,7 @@
+.nav-item.has-submenu.active > a {
+    background-color: #1d5083;
+}
+
+.submenu-active {
+    background-color: #1d5083;
+}

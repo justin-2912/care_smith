@@ -8,12 +8,10 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {MatTabsModule} from '@angular/material/tabs';
-import { CustomerClearanceComponent } from './dashboard/customer-clearance/customer-clearance.component';
-import { IntransitComponent } from './dashboard/intransit/intransit.component';
-import { TotalOrderComponent } from './dashboard/total-order/total-order.component';
-import { UnderProductionComponent } from './dashboard/under-production/under-production.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
+import { CustomerComponent } from './Masterr/customer/customer.component';
+import { SupplierComponent } from './Masterr/supplier/supplier.component';
 
 
 @NgModule({
@@ -32,10 +30,8 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     AdminLayoutComponent,
     DashboardComponent,
-    TotalOrderComponent,
-    UnderProductionComponent,
-    IntransitComponent,
-    CustomerClearanceComponent
+    CustomerComponent,
+    SupplierComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -53,12 +53,47 @@
         </li>
     </ul>
   </div>
-    <ul class="nav">
+    <!-- <ul class="nav">
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
             <a class="nav-link" [routerLink]="[menuItem.path]">
                 <i class="material-icons">{{menuItem.icon}}</i>
                 <p>{{menuItem.title}}</p>
             </a>
         </li>
+    </ul> -->
+
+    <ul class="nav">
+        <ng-container *ngFor="let menuItem of menuItems; let i = index">
+            <li
+                *ngIf="!menuItem.subMenu"
+                routerLinkActive="active"
+                [ngClass]="{'active': isMainMenuActive(i)}"
+                class="{{menuItem.class}} nav-item"
+            >
+                <a class="nav-link" [routerLink]="[menuItem.path]" (click)="toggleMainMenu(i)">
+                    <i class="material-icons">{{menuItem.icon}}</i>
+                    <p>{{menuItem.title}}</p>
+                </a>
+            </li>
+            <li *ngIf="menuItem.subMenu" class="{{menuItem.class}} nav-item has-submenu" [ngClass]="{'active': isMainMenuActive(i)}">
+                <a class="nav-link" (click)="toggleMainMenu(i)">
+                    <i class="material-icons">{{menuItem.icon}}</i>
+                    <p>{{menuItem.title}}</p>
+                </a>
+                <ul *ngIf="isMainMenuActive(i)" class="submenu">
+                    <li *ngFor="let subItem of menuItem.subMenu" class="submenu-item">
+                        <a
+                            class="nav-link"
+                            [routerLink]="[subItem.path]"
+                            routerLinkActive="submenu-active"
+                            [ngClass]="{'submenu-active': isSubMenuActive(i)}"
+                        >
+                            <p>{{subItem.title}}</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ng-container>
     </ul>
+    
 </div>
